@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<!--
+    For now, until layout components for material 2 are finished, we can rely on
+    the sidenav layout to give us a "fullpage" application
+-->
+<md-sidenav-layout fullscreen>
+    <md-toolbar [color]="'primary'">
+        <h1>
+            {{title}}
+        </h1>
+    </md-toolbar>
+</md-sidenav-layout>
