@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
+import { MdDataTableModule } from 'ng2-material';
 
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { AppComponent } from './app.component';
         HttpModule,
         MaterialModule.forRoot(),
         CoreModule,
+        MdDataTableModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

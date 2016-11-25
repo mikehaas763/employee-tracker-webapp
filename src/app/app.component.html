@@ -1,7 +1,24 @@
-<!--
-    For now, until layout components for material 2 are finished, we can rely on
-    the sidenav layout to give us a "fullpage" application
--->
-<md-sidenav-layout fullscreen>
-    <et-app-toolbar></et-app-toolbar>
-</md-sidenav-layout>
+<div style="display: flex; flex-flow: column nowrap; height: 100%">
+    <div style="flex: 0 0 auto">
+        <et-app-toolbar></et-app-toolbar>
+    </div>
+    <div style="flex: 1 1 auto; overflow-y: auto; position: relative; display: flex;">
+        <md-data-table layout-fill>
+            <thead>
+                <tr>
+                    <th class="md-text-cell">Material</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let material of materials">
+                    <td class="md-text-cell">{{ material.name }}</td>
+                    <td>{{ material.quantity }}</td>
+                    <td>{{ material.price }}</td>
+                </tr>
+            </tbody>
+        </md-data-table>
+
+    </div>
+</div>
