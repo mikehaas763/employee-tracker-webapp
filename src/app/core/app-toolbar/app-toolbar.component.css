@@ -10,4 +10,5 @@
     color: currentColor;
     text-decoration: none;
     text-transform: uppercase;
+    cursor: pointer;
 }

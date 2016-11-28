@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddEmployeeOpener } from '../../employee/add-employee/add-employee-opener';
 
 @Component({
     selector: 'et-app-toolbar',
@@ -8,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class AppToolbarComponent implements OnInit {
     public title = 'Employee Tracker';
 
-    constructor() { }
+    constructor(private addEmployeeOpener: AddEmployeeOpener) { }
+
+    openAddEmployeeDialog() {
+        this.addEmployeeOpener.openDialog();
+    }
 
     ngOnInit() {
     }

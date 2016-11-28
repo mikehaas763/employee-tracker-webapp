@@ -5,8 +5,9 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { MdDataTableModule } from 'ng2-material';
 
-import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
+import { EmployeeModule } from './employee/employee.module';
 
 @NgModule({
     declarations: [
@@ -18,6 +19,7 @@ import { AppComponent } from './app.component';
         HttpModule,
         MaterialModule.forRoot(),
         CoreModule,
+        EmployeeModule,
         MdDataTableModule,
     ],
     providers: [],
