@@ -6,6 +6,7 @@ import { MaterialModule } from '@angular/material';
 
 import { AddEmployeeDialogComponent } from './add-employee/add-employee-dialog.component';
 import { AddEmployeeOpener } from './add-employee/add-employee-opener';
+import { EmployeeDao } from './';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { AddEmployeeOpener } from './add-employee/add-employee-opener';
     ],
     providers: [
         AddEmployeeOpener,
+        EmployeeDao,
     ],
 })
 export class EmployeeModule { }

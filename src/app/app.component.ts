@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Employee, EmployeeDao } from './employee';
 
 @Component({
     selector: 'et-app-root',
@@ -7,11 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = 'Employee Tracker';
-    materials: Array<any> = [];
+    employees: Array<Employee> = [];
 
-    constructor() {
-        for(let i = 0; i < 10; i++) {
-            this.materials.push({ 'id': i + 1, 'name': 'Acrylic (Transparent)', 'quantity': '25', 'price': '$2.90' });
-        }
+    constructor(employeeDao: EmployeeDao) {
+        employeeDao.sendEmployee(new Employee(1, 'Mike Haas', 50000, 3000));
+        this.employees = employeeDao.getAll();
     }
 }

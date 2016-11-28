@@ -6,16 +6,18 @@
         <md-data-table>
             <thead>
                 <tr>
-                    <th class="md-text-cell">Material</th>
-                    <th>Quantity</th>
-                    <th>Unit price</th>
+                    <th class="md-text-cell">Employee name</th>
+                    <th>Salary</th>
+                    <th>Deductions</th>
+                    <th>After Deductions</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let material of materials">
-                    <td class="md-text-cell">{{ material.name }}</td>
-                    <td>{{ material.quantity }}</td>
-                    <td>{{ material.price }}</td>
+                <tr *ngFor="let employee of employees">
+                    <td class="md-text-cell">{{ employee.name }}</td>
+                    <td>${{ employee.salary }}</td>
+                    <td>${{ employee.deductions }}</td>
+                    <td>${{ employee.salary - employee.deductions }}</td>
                 </tr>
             </tbody>
         </md-data-table>

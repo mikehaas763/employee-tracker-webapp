@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MdDialogRef } from '@angular/material';
 
-import { Employee } from '../employee';
+import { Employee, EmployeeDao } from '../';
 
 @Component({
     selector: 'et-add-employee-dialog',
@@ -11,9 +11,13 @@ import { Employee } from '../employee';
 export class AddEmployeeDialogComponent {
     model: Employee = new Employee();
 
-    constructor(public dialogRef: MdDialogRef<AddEmployeeDialogComponent>) { }
+    constructor(
+        public dialogRef: MdDialogRef<AddEmployeeDialogComponent>,
+        private employeeDao: EmployeeDao
+    ) { }
 
     onSubmit() {
-        console.log('submitted');
+        this.employeeDao.sendEmployee(this.model);
+        this.dialogRef.close();
     }
 }
