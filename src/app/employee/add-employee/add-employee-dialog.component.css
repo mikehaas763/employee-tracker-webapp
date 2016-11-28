@@ -1,0 +1,11 @@
+.add-employee-dialog {
+    width: 512px;
+}
+
+.add-employee-dialog md-input {
+    width: 100%;
+}
+
+.add-employee-dialog [md-button] {
+    float: right;
+}

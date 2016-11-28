@@ -1,0 +1,15 @@
+<div class="add-employee-dialog">
+    <md-toolbar color="primary">Add Employee</md-toolbar>
+    <form (ngSubmit)="onSubmit()">
+        <md-input #employeeName placeholder="Employee Name" [(ngModel)]="model.name" name="name"></md-input>
+        <md-input placeholder="Salary" align="end" [(ngModel)]="model.salary" name="salary">
+            <span md-prefix>$&nbsp;</span>
+            <span md-suffix>.00</span>
+        </md-input>
+        <md-input placeholder="Deduction Total" align="end" [(ngModel)]="model.deductions" name="deductions">
+            <span md-prefix>$&nbsp;</span>
+            <span md-suffix>.00</span>
+        </md-input>
+        <button md-button color="primary" type="submit">Add Employee</button>
+    </form>
+</div>
